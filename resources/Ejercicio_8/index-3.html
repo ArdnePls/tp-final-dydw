@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipo de Triángulo</title>
+</head>
+<body>
+    <script>
+        let ladoA = prompt("Ingresa el primer lado del triángulo:");
+        let ladoB = prompt("Ingresa el segundo lado del triángulo:");
+        let ladoC = prompt("Ingresa el tercer lado del triángulo:");
+
+        if (ladoA === ladoB && ladoB === ladoC) {
+            document.write("<p>El triángulo es equilátero</p>");
+        } else if (ladoA != ladoB && ladoB != ladoC && ladoA != ladoC) {
+            document.write("<p>El triángulo es escaleno</p>");
+        } else {
+            document.write("<p>El triángulo es isósceles</p>");
+        }
+    </script>
+</body>
+</html>

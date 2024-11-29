@@ -1,0 +1,65 @@
+#ejercicio_uno {
+  background-color: #007bff;
+  margin: 20px;
+  padding: 15px;
+}
+
+#ejercicio_dos {
+  background-image: url("../img/foto.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#ejercicio_tres {
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: red;
+}
+
+#ejercicio_cuatro {
+  border-width: 2px;
+  border-style: solid;
+  padding: 5px;
+}
+
+#ejercicio_cuatro p {
+  font-weight: bold;
+}
+
+#ejercicio_cinco div {
+  background-color: yellow;
+  text-align: center;
+}
+
+#ejercicio_seis {
+  border: 5px double purple;
+  background-color: gold;
+  margin: 40px;
+}
+
+#ejercicio_siete {
+  background: url("../img/foto2.jpg") no-repeat right bottom;
+}
+
+#ejercicio_ocho {
+  background-image: url("../img/foto2.jpg");
+  background-size: 50%;
+  background-repeat: repeat-y;
+}
+
+#ejercicio_nueve {
+  background: url("../img/foto2.jpg") repeat-y right, orange;
+  background-size: 25%;
+}
+
+#ejercicio_nueve .btn {
+  background-color: #7bb3ee;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#ejercicio_diez {
+  width: 50%;
+  border: green dotted 3px;
+  padding: 25px;
+}

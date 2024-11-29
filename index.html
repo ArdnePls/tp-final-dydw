@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrea Celtich</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main>
+    <div class="desktop">
+    <header>
+      <h1 style='display: none;'>Andrea Celtich</h1>
+      <nav>
+        <div class="taskbar" id="taskBar">
+          <div class="taskbar-left">
+            <div class="start-button button" onclick="toggleStartMenu()">
+              <div class="start-logo"></div>
+              <span>Inicio</span>
+            </div>
+            <div class="notepad-minimized info-window-task-button task-button" aria-label="Abrir o minimizar descripción personal" id="infoWindowTaskButton" onclick="openWindow('infoWindow', true)">
+              <img src="./img/notepad_icon.png" alt="Notepad Icon">
+              - Notepad
+            </div>
+            <div class="notepad-minimized music-player-task-button task-button" aria-label="Abrir o minimizar reproductor de música" id="musicPlayerTaskButton" onclick="openWindow('musicPlayer', true)">
+              <img src="./img/media_player_icon.png" alt="Mediaplayer Icon">
+              - Windows Media Player
+            </div>
+            <div class="notepad-minimized documents-window-task-button task-button" aria-label="Abrir o minimizar carpeta de proyectos" id="documentsWindowTaskButton" onclick="openWindow('documentsWindow', true)">
+              <img src="./img/documents_icon.png" alt="Documents Icon">
+              - Proyectos
+            </div>
+          </div>
+          <div class="taskbar-right">
+            <span id="clock">1:27</span>
+          </div>
+        </div>
+        <div class="start-menu" id="startMenu">
+          <div class="window">
+            <div class="title-bar">
+              <div class="title-bar-text">Menú de inicio</div>
+              <div class="title-bar-controls">
+                <button class="close-button button" aria-label="Cerrar menú de inicio" onclick="toggleStartMenu()"></button>
+              </div>
+            </div>
+            <div class="window-body">
+              <ul>
+                <li onclick="openWindow('infoWindow'); closeWindow('startMenu')" aria-label="Cerrar menú y Abrir descripción personal">Andrea Celtich</li>
+                <li><a href="https://www.linkedin.com/in/andrea-celtich/" onclick="closeWindow('startMenu')" target="_blank" aria-label="Abrir Linkedin en una nueva pestaña y cerrar el menú">LinkedIn</a></li>
+                <li><a href="https://github.com/ArdnePls" target="_blank" aria-label="Cerrar menú y abrir Github en una nueva pestaña" onclick="closeWindow('startMenu')">GitHub</a></li>
+                <li><a href="mailto:andrea.celtich@gmail.com" onclick="closeWindow('startMenu')" aria-label="Cerrar menú y abrir correo electrónico en una nueva pestaña">Contacto</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+      <section>
+        <h2 style='display: none;'>Índice</h2>
+        <div class="container" style="margin: 0%;">
+            <div class="row">
+              <ul id="desktop-items">
+                <li>
+                    <div class="col-12 icon">
+                      <a href="./resources/CV.pdf" download="CV_Andrea_Celtich.pdf" style="display: inherit; align-items: center;">
+                        <img src="./img/document_icon.png" alt="Icono de documento" class="me-3">
+                        <span aria-label="Descargar curriculum">Mi <abbr title="Curriculum Vitae">CV</abbr></span>
+                      </a>
+                    </div>
+                
+                </li>
+                <li>
+                    <div class="col-12 icon" aria-label="Abrir carpeta de proyectos" ondblclick="openWindow('documentsWindow')">
+                        <img src="./img/documents_icon.png" alt="Icono de carpeta" class="me-3">
+                        <span>Proyectos</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-12 icon">
+                        <img src="./img/recycle_bin_icon.png" alt="Icono de papelera" class="me-3">
+                        <span>Papelera</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-12 icon"  aria-label="Abrir Reproductor de música" ondblclick="toggleMusicPlayer()">
+                        <img src="./img/music_icon.png" alt="Ícono de música" class="me-3">
+                        <span>Boa-Duvet.mp3</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-12 icon" aria-label="Abrir descripción del trabajo práctico" ondblclick="openWindow('alertWindow')">
+                        <img src="./img/exe_icon.png" alt="Ícono de ejecutar programa" class="me-3">
+                        <span>alert.exe</span>
+                    </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="notepad-window" id="infoWindow">
+              <div class="title-bar">
+                  <div  onclick="openWindow('infoWindow')">
+                      <img src="./img/notepad_icon.png" alt="Icono de block de notas"> <h2 style="font-size: 1em; margin: 0; font-weight: normal; display: inline;">Sobre mí</h2> - Notepad
+                  </div>
+                  <button class="close-button button" aria-label="Cerrar descripción personal" onclick="closeWindow('infoWindow')">✕ </button>
+              </div>
+              <div class="menu-bar"  onclick="openWindow('infoWindow')">
+                <ul style="margin: 0px; padding: 0px;">
+                  <li style="display: inline;"><span>File</span></li>
+                  <li style="display: inline;"><span>Edit</span></li>
+                  <li style="display: inline;"><span>Search</span></li>
+                  <li style="display: inline;"><span>Help</span></li>
+                </ul>
+              </div>
+              <div class="content"  onclick="openWindow('infoWindow')">
+                  <p>Soy estudiante de Ingeniería Informática en UADE, desde 2019 trabajo en la industria, siempre en Backend. Recientemente he podido comenzar a incursionar en el Frontend gracias a la materia Diseño y Desarrollo Web, para la cual he desarrollado esta página.</p>
+                  <p>En mi tiempo libre disfruto de encontrar bandas poco conocidas del norte de Europa, el recreacionismo histórico y leer. Suelo coleccionar tanto mangas como libros en prosa. Cuando se puede, recorrer el mundo es de mis actividades favoritas.</p>
+                  <p>Para ver más sobre mis trabajos, cierre esta ventana.</p> 
+              </div>
+          </div>
+        </section>
+
+      <article>
+        <h2 style='display: none;'>Música</h2>
+       <div class="window music-player" id="musicPlayer">
+          <div class="title-bar">
+              <div>
+                  <img src="./img/media_player_icon.png" alt="Mediaplayer icon"> Reproductor de Música
+              </div>
+              <button class="close-button button" aria-label="Cerrar reproductor de música" onclick="closeWindow('musicPlayer')">✕</button>
+          </div>
+          <div >
+            <p>Reproduciendo: Boa-Duvet.mp3</p>
+            <iframe style="width: -webkit-fill-available;" src="https://www.youtube.com/embed/Uoox9fpmDP0?si=DIK0wsgAW7maq4j3&amp;start=06" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>  
+      </article>
+      <section>
+        <div class="documents-window" id="documentsWindow">
+            <div class="title-bar">
+                <div  onclick="openWindow('documentsWindow')">
+                    <img src="./img/documents_icon.png" alt="Documents icon"> <h2 style="font-size: 1em; margin: 0; font-weight: normal; display: inline;">Proyectos</h2>
+                </div>
+                <button class="close-button button" aria-label="Cerrar descripción personal" onclick="closeWindow('documentsWindow')">✕ </button>
+            </div>
+            <div class="menu-bar"  onclick="openWindow('documentsWindow')">
+              <ul style="margin: 0px; padding: 0px;">
+                <li style="display: inline;"><span>File</span></li>
+                <li style="display: inline;"><span>Edit</span></li>
+                <li style="display: inline;"><span>View</span></li>
+                <li style="display: inline;"><span>Go</span></li>
+                <li style="display: inline;"><span>Favorites</span></li>
+                <li style="display: inline;"><span>Help</span></li>
+              </ul>
+            </div>
+            <div class="content"  onclick="openWindow('documentsWindow')">
+              <div class="container">
+                <div class="row">
+                  <ul class="row">
+                    <li>
+                      <div class="col-3 icon">
+                        <a href="./resources/Ejercicio_1/04/04.html" target="_blank">
+                          <img src="./img/explorer_icon.png" alt="Icono de documento" class="me-3">
+                          <span>Ejercicio 1</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="col-3 icon">
+                        <a href="./resources/Ejercicio_2/03/index.html" target="_blank">
+                          <img src="./img/explorer_icon.png" alt="Icono de documento" class="me-3">
+                          <span>Ejercicio 2</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="col-3 icon">
+                        <a href="./resources/Ejercicio_3/index.html" target="_blank">
+                          <img src="./img/explorer_icon.png" alt="Icono de documento" class="me-3">
+                          <span>Ejercicio 3</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="col-3 icon">
+                        <a href="./resources/Ejercicio_4/ejercicio-3.html" target="_blank">
+                          <img src="./img/explorer_icon.png" alt="Icono de documento" class="me-3">
+                          <span>Ejercicio 4</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="col-3 icon">
+                        <a href="./resources/Ejercicio_5/02-fluido.html" target="_blank">
+                          <img src="./img/explorer_icon.png" alt="Icono de documento" class="me-3">
+                          <span>Ejercicio 5</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="col-3 icon">
+                        <a href="./resources/Ejercicio_6/index.html" target="_blank">
+                          <img src="./img/explorer_icon.png" alt="Icono de documento" class="me-3">
+                          <span>Ejercicio 6</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="col-3 icon">
+                        <a href="./resources/Ejercicio_7/ejercicio3.html" target="_blank">
+                          <img src="./img/explorer_icon.png" alt="Icono de documento" class="me-3">
+                          <span>Ejercicio 7</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="col-3 icon">
+                        <a href="./resources/Ejercicio_8/index-5.html" target="_blank">
+                          <img src="./img/explorer_icon.png" alt="Icono de documento" class="me-3">
+                          <span>Ejercicio 8</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="window alert-window" id="alertWindow">
+           <div class="title-bar">
+               <div>
+                   Error Starting Program
+               </div>
+               <button class="close-button button" aria-label="Cerrar alerta de descripción del trabajo práctico" onclick="closeWindow('alertWindow')">✕</button>
+           </div>
+           <div style="display: flex; align-items: center;" >
+            <div class="alert"><img src="./img/warning_icon.png" alt="Icono de alerta"></div>
+            <div><p style="text-align: left;">Andrea Celtich - Diseño y Desarrollo Web - TP Final</p></div>
+           </div>
+           <button class="button ok-button" aria-label="Cerrar alerta de descripción del trabajo práctico" onclick="closeWindow('alertWindow')">OK</button>
+         </div>  
+       </footer>
+    </div>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>

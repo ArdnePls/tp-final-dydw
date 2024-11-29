@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.rojo {
+  color: #ff1100;
+}
+
+.verde {
+  color: #1abb55;
+}
+
+.marron {
+  color: #9b5651;
+}
+
+.violeta {
+  color: #967091;
+}
+
+.rosa {
+  color: #ff00ea;
+}
+
+h1 {
+  color: #2081ff;
+}
+
+h2 {
+  color: #2081ff;
+}
+
+h3 {
+  color: #d88d01;
+}
+
+strong {
+  font-weight: normal;
+}
+
+.rojo strong {
+  color: #980a00;
+}
+
+.verde strong {
+  color: #107234;
+}
+
+.marron strong {
+  color: #613633;
+}
+
+.violeta strong {
+  color: #523f50;
+}
+
+.rosa strong {
+  color: #7e0074;
+}

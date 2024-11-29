@@ -1,0 +1,75 @@
+<!-- Ejercicio 4: Sitio web de noticias
+Objetivo: Crear una página web de noticias con diferentes secciones y artículos, utilizando etiquetas para organizar el contenido.
+
+Contenido:
+Encabezado: Logotipo del sitio web, nombre.
+Navegación: Enlaces a las diferentes secciones de noticias (nacional, internacional, deportes, economía).
+Sección principal:
+Section: Artículos destacados de la sección seleccionada.
+Article: Cada artículo con título, imagen, resumen y enlace a la noticia completa.
+Aside: Publicidad o banners informativos.
+Pie de página: Información de contacto, política de privacidad y términos de uso.
+
+Etiquetas a utilizar:
+header, nav, main, section, article, aside, figure, figcaption, footer -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My News</title>
+</head>
+<body>
+    <header>
+        <img src="./imgs/logo.png" alt="Logotipo de My News" width="50" height="50">
+        <h1>My News</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#nacional">Nacional</a></li>
+            <li><a href="#internacional">Internacional</a></li>
+            <li><a href="#deportes">Deportes</a></li>
+            <li><a href="#economia">Economía</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="nacional">
+            <h2>Noticias Nacionales</h2>
+            <section>
+                <h3>Destacados</h3>
+                <article>
+                    <h4>Continúa el conflicto</h4>
+                    <figure>
+                        <img src="./imgs/dest1.jpg" alt="aerolineas argentinas" width="100" height="100">
+                    </figure>
+                    <p>Aerolíneas Argentinas y Flybondi trasladarán sus operaciones de Aeroparque a Ezeiza.</p>
+                    <a href="mock.html">Leer más</a>
+                </article>
+                <article>
+                    <h4>“Queremos cambiar para bien Punta Mogotes”.</h4>
+                    <figure>
+                        <img src="/sociedad/queremos-cambiar-para-bien-punta-mogotes-asi-es-el-master-plan-que-impulsan-los-concesionarios-de-nid30082024/" alt="imagen de la noticia" width="100" height="100">
+                    </figure>
+                    <p>Así es el máster plan que impulsan los concesionarios de los balnearios del complejo</p>
+                    <a href="mock2.html">Leer más</a>
+                </article>
+            </section> 
+            <!-- Continuar desde aca  -->
+        <!-- No pude llegar a completar el ejercicio pero quise entregar los 4 de todas formas -->
+        <aside>
+            <figure>
+                <img src="./imgs/banner1.jpg" alt="Comparte una coca cola" width="500" height="200">
+                <figcaption>Publicidad</figcaption>
+            </figure>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Información de contacto: andrea@noticias.com | Tel: +549111111111</p>
+        <p><a href="https://loremipsumensemble.com/politica-de-privacidad/">Política de privacidad</a></p>
+        <p><a href="https://aarmygym.com/terminos-y-condiciones/">Términos de uso</a></p>
+    </footer>
+</body>
+</html>

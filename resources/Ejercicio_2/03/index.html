@@ -1,0 +1,81 @@
+<!-- Ejercicio 3: Página de producto
+Objetivo: Crear una página de producto para un producto online, utilizando etiquetas para destacar información importante.
+
+Contenido:
+Encabezado: Imagen del producto, nombre y precio.
+Sección principal:
+Artículo: Descripción del producto, características y beneficios.
+Aside: Testimonios de clientes satisfechos.
+Figure: Imagen del producto en uso.
+Pie de página: Información de contacto, política de devolución y garantía.
+
+Etiquetas a utilizar:
+header, main, article, section, aside, figure, figcaption, footer -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto El asesinato de Roger Ackroyd</title>
+</head>
+<body>
+    <header>
+        <img src="./imgs/producto.jpg" alt="Imagen del libro" width="400" height="500">
+        <h1>El asesinato de Roger Ackroyd - Agatha Christie</h1>
+        <p><strong>Precio: $16.000</strong></p>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <h2>Descripción del Producto</h2>
+                <p>Libro de misterio galardonado como la mejor obra policial a nivel mundial, y el mejor trabajo de su autora. Nueva colección de Planeta DeAgostini.</p>
+                
+                <h3>Características:</h3>
+                <ul>
+                    <li>Título: El asesinato de Roger Ackroyd</li>
+                    <li>Serie: Agatha Christie</li>
+                    <li>Autor: Agatha Christie</li>
+                    <li>Idioma: Español</li>
+                    <li>Estado: Nuevo</li>
+                    <li>Editor: Planeta DeAgostini (Barcelona)</li>
+                    <li>Fecha de edición: 2022</li>
+                    <li>Novela de misterio y suspenso</li>
+                    <li>263 p.; 15,5x24 cm.: tapas duras</li>
+                </ul>
+
+                <h3>Beneficios:</h3>
+                <ul>
+                    <li>Envío gratis a partir de $10.000</li>
+                    <li>Hasta 12 cuotas sin interés en bancos seleccionados</li>
+                </ul>
+            </article>
+            <aside>
+                <h2>Testimonios de Clientes Satisfechos</h2>
+                <blockquote>
+                    <p>"Excelente!!!."</p>
+                    <cite>- Marta Perez</cite>
+                </blockquote>
+                <blockquote>
+                    <p>"Increíble libro, hiper recomendable"</p>
+                    <cite>- Juan Dominguez</cite>
+                </blockquote>
+            </aside>
+        </section>
+
+        <figure>
+            <img src="./imgs/prodenuso.jpg" alt="Edicion Brihet" width="150" height="200">
+            <img src="./imgs/prod2.jpg" alt="imagen del libro" width="150" height="200">
+            <figcaption>Edición coleccionable Serie Agatha Christie.</figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <p>Información de contacto: andrea.celtich@gmail.com | Tel: +11111111111</p>
+        <p>Política de devolución: Puedes devolver el producto dentro de los 30 días si no estás completamente satisfecho.</p>
+        <p>Garantía: Este producto cuenta con una garantía de 6 meses.</p>
+    </footer>
+</body>
+</html>
